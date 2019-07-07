@@ -12,6 +12,11 @@ plugins {
     id("com.github.ben-manes.versions") version "0.21.0"
 }
 
+java {
+    sourceCompatibility = JavaVersion.VERSION_1_9
+    targetCompatibility = JavaVersion.VERSION_1_9
+}
+
 repositories { jcenter() }
 
 testSets { create("integrationTest") }

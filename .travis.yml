@@ -7,6 +7,7 @@ jobs:
     - yamllint $(git ls-files '*.yaml' '*.yml')
     - docker run --entrypoint="promtool" --volume=$(pwd)/prometheus:/prom prom/prometheus:v2.11.1 check config /prom/prometheus.yml
   - language: java
+    jdk: openjdk9
     script:
     - ./gradlew check
     - ./gradlew integrationTest
